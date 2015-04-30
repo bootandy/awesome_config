@@ -28,11 +28,17 @@ configpath="/home/"..os.getenv("USER").."/.config/awesome/"
 
 -- THEME
 -- default theme
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+--beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+
+beautiful.init("/home/andy/.config/awesome/theme.lua")
 
 -- CUSTOM THEMES - pick name from themes/
 --local theme = "zenburn-custom"
 --beautiful.init(configpath .. "/themes/" .. theme ..  "/theme.lua")
+
+for s = 1, screen.count() do
+	gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+end
 
 
 -- KEYBINDED COMMANDS (see settings/custom_binds.lua)
