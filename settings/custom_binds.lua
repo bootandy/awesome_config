@@ -20,13 +20,30 @@ globalkeys = awful.util.table.join(globalkeys,
             if client.focus then
                 client.focus:raise()
             end
-        end)
+        end),
+
+ -- Standard program
+    awful.key({ modkey, }, "t", 	function () awful.util.spawn(terminal) end),
+    awful.key({ modkey, }, "c",         function () awful.util.spawn('chromium-browser') end),
+    awful.key({ modkey, }, "g",         function () awful.util.spawn('gimp') end),
+    awful.key({ modkey, }, "v",         function () awful.util.spawn('vlc') end),
+    awful.key({ modkey, }, "i",         function () awful.util.spawn('xchat') end),
+
+    awful.key({ modkey, }, "p",         function () awful.util.spawn('/usr/lib/pycharm/bin/pycharm.sh') end),
+    awful.key({ modkey, }, "a",         function () awful.util.spawn('/usr/lib/android-studio/bin/studio.sh') end),
+    awful.key({ modkey, }, "j",         function () awful.util.spawn('/opt/idea-IC-135.1230/bin/idea.sh') end),
+    awful.key({ modkey, }, "m",         function () awful.util.spawn('runfreemind') end),
+    awful.key({ modkey, }, "s",         function () awful.util.spawn('skype') end),
+
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn('sudo /usr/sbin/pm-suspend') end),
+    awful.key({ modkey }, "F12",        function () awful.util.spawn("xscreensaver-command -lock") end)
+
 )
 
 -- CLIENT KEYS (work on current clients-windows)
 clientkeys = awful.util.table.join(clientkeys,
     --KILL active client
-    awful.key({ modkey, "Shift"   }, "#52",      function (c) c:kill()                         end)
+    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end)
 )
 
 -- CLIENT BUTTONS BINDINGS

@@ -11,26 +11,6 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons } },
         {
-                rule = { class = "Firefox"},
-                properties= { tag = tags[1][1] },
-        },
-        {
-                rule = { class = "Pidgin" },
-                properties = { tag = tags[1][5],
-                               callback   = awful.client.setslave },
-        },
-        { 
-                rule = { instance = "plugin-container"},
-                properties = { floating = true } },
-        {
-                rule = { class = "Eclipse" },
-                properties = { tag = tags[1][4] }
-        },
-        {
-                rule = { instance = "plugin-container" },
-                properties = { floating = true }
-        },
-        {
                 rule = { class = "gimp" },
                 properties = { floating = true }
         },
