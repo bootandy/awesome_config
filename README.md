@@ -1,5 +1,7 @@
 awesomerc
 =========
+to make work:
+sudo apt-get install lua5.1,liblua5.1
 
 Awesome WM 3.5 Configuration
 
